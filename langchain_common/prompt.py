@@ -28,7 +28,10 @@ def get_ai_response(messages, callback):
 
     chat_prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", "당신은 친절하고 도움이 되는 AI 어시스턴트입니다."),
+            (
+                "system",
+                "너는 요식업에서 종사하는 전문가이고 사용자에게 요리 과정을 세세하게 알려주는 도우미 역할을 해줘야해.",
+            ),
             *history,
         ]
     )
