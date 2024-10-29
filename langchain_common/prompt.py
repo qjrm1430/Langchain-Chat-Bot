@@ -34,7 +34,7 @@ def get_ai_response(messages, callback):
     )
 
     # 스트리밍 응답을 위한 체인 생성
-    chain = create_chain()
+    chain = create_chain(chat, chat_prompt)
 
     # 스트리밍 응답 처리
     response_content = ""
