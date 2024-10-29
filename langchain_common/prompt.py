@@ -1,5 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 
+from .chain import create_chain
 from .constant import CHATBOT_MESSAGE, CHATBOT_ROLE
 from .model import create_model
 
@@ -33,7 +34,7 @@ def get_ai_response(messages, callback):
     )
 
     # 스트리밍 응답을 위한 체인 생성
-    chain = chat_prompt | chat
+    chain = create_chain()
 
     # 스트리밍 응답 처리
     response_content = ""
